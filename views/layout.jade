@@ -1,0 +1,45 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset="utf-8")
+    title GeoMsg
+    link(rel="stylesheet", type="text/css", href="/main.css")
+
+
+  body
+    div(style="position:absolute;z-index:5;width:100%;")
+        h2#titleName GeoMsg
+        h2#playerName= user.username
+        a.navbtn(href="/signout" role="button" style="width:50px;height:20px;background:white;") Sign out
+
+
+        div#center-ctrls(style="position:absolute;top:0;left:50%;width:120px;margin-left:-60px;background:red;")
+            input#send-status(type="button" value="message off" style="width:120px;background:darkgrey;")
+            input#explore(type="button" value="discover off" style="width:120px;background:darkgrey;")
+            input#show-limit(type="button" value="radius field tog" style="width:120px;background:darkgrey;")
+
+    //- modal overlay with just css
+    #modalOverlay
+        #modalPopup
+            h2#modalHead Place a Msg
+            a#close(href='#!') ×
+            .content
+                form#addMsgForm(action="/addmsg" method="POST" enctype="multipart/form-data")
+                    input#coordLatField(type="textfield" name="latcoord" hidden="hidden")
+                    input#coordLngField(type="textfield" name="lngcoord" hidden="hidden")
+                    input(type="text" name="content" placeholder="add message")
+                    p Img Upload (Or Img Upload) Tog:
+                    input#imgMethodTog(type="checkbox")        
+                    input(type="file" name="uploadedimg" accept="image/*")
+                    input.hidden(type="text" name="imgurl" placeholder="add imageUrl" autocomplete="off")
+                    input(type="submit" value="submit")
+
+    header
+
+        
+
+
+    block content
+    script(type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_H4LritTH7GiZ_8Tt8SWgBU8rRLF2a-4")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+    script(src="/client.js")

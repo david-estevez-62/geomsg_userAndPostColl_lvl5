@@ -1,0 +1,33 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset="utf-8")
+    title GeoMsg
+    link(rel="stylesheet", type="text/css", href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/4.9.0/bootstrap-social.css")
+    link(rel="stylesheet", type="text/css", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css")
+    link(rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css")
+    link(rel="stylesheet", type="text/css", href="main.css")
+  body       
+      div.login
+        div
+          if (info.length !== 0)
+            div(class="alert alert-warning")= info
+          form#loginForm(action="/signin", method="post")
+            div
+              input.inputlogin(type="text", name="username", placeholder="username")
+            div
+              input.inputlogin(type="password", name="password", placeholder="password")
+            div
+              input.loginbtn1(type="submit", value="Sign in", placeholder='Sign in', class="btn btn-default")
+        div
+          a.signup(href="/signup" class="btn btn-default") Sign Up
+        div.forgotbtn
+          a(href="/changeUsername") Reset Username
+        div.forgotbtn
+          a(href="/changePassword") Reset Password
+        div
+          a#facebooksignin(class="btn btn-block btn-social btn-facebook") Signin with Fb
+            i(class="fa fa-facebook")
+        div
+          a#googlesignin(class="btn btn-block btn-social btn-google") Signin with G+
+            i(class="fa fa-google")

@@ -1,0 +1,215 @@
+html, body { width:100%; height:100%; margin: 0; padding: 0; background: darkgrey;}
+
+#map {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+header{
+  height:75px;
+  width:100%;
+  background-color: black;
+  opacity: 0.4;
+  position: absolute;
+  z-index: 3;
+}
+
+
+#titleName {
+    position:absolute;
+    left:80px;
+    color:darkgrey;
+}
+
+#playerName {
+  position:absolute;
+  right:120px;
+  color:darkgrey;
+}
+
+
+.login{
+  width:20%;
+  max-height: auto;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#loginForm div {
+  margin-bottom: 5px;
+}
+.btn-block{
+  margin-top: 10px;
+  width:305px;
+}
+.inputlogin {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width:100%;
+  height:35px;
+}
+
+.navbtn{
+  position:absolute;
+  right:0;
+}
+
+.btn-facebook {
+  width: 100%;
+}
+
+.btn-google {
+  width:100%;
+}
+
+
+/* layout styles */
+#addMsgForm [type="text"] {
+  display: block;
+}
+
+#addMsgForm .hidden {
+  display: none;
+}
+
+
+
+/******************* modal dialog box ********************/
+/*********************************************************/
+#modalHead {
+  text-align: center;
+  font-family: "Trebuchet MS", Tahoma, Arial, sans-serif;
+  color: #333;
+  text-shadow: 0 1px 0 #fff;
+  margin: 50px 0;
+}
+
+#modalOverlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  transition: opacity 200ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 12;
+  display: block;
+  height: 100%;
+}
+
+#modalOverlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+#modalPopup {
+  margin: 75px auto;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #666;
+  width: 300px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index:12;
+}
+
+#modalPopup h2 {
+  margin-top: 0;
+  color: #666;
+  font-family: "Trebuchet MS", Tahoma, Arial, sans-serif;
+}
+
+#modalPopup a {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 20px;
+  right: 20px;
+  opacity: 0.9;
+  transition: all 200ms;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #666;
+}
+
+#modalPopup a:hover {
+  opacity: 1;
+}
+
+#modalPopup .content {
+  min-height: 400px;
+  overflow: auto;
+}
+
+#modalPopup p {
+  margin: 0 0 1em;
+}
+
+#modalPopup p:last-child {
+  margin: 0;
+}
+/*********************************************************/
+/******************* modal dialog box ********************/
+
+
+@media (max-width: 1000px) {
+  .login {
+    width: 30%;
+  }
+}
+
+
+
+@media (max-width: 800px) {
+  .login {
+    width: 40%;
+  }
+}
+
+
+
+@media (max-width:674px) {
+  #titleName {
+    left:50px;
+  }
+  #playerName {
+    right:100px;
+  }
+}
+
+@media (max-width: 600px) {
+  .login {
+    width: 50%;
+  }
+}
+
+@media (max-width: 590px) {
+  #titleName {
+    left:30px;
+  }
+  #playerName {
+    right:80px;
+  }
+}
+
+@media (max-width: 510px) {
+  #titleName {
+    left:5px;
+  }
+  #playerName {
+    right:60px;
+  }
+}
+
+@media (max-width: 450px) {
+  #playerName {
+    right:45px;
+  }
+}
